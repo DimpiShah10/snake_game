@@ -121,6 +121,11 @@ class Game:
                 self.play_sound("crash")
                 raise "Game Over"
 
+        # snake colliding with the boundaries of the window
+        if not (0 <= self.snake.x[0] <= 1000 and 0 <= self.snake.y[0] <= 800):
+            self.play_sound('crash')
+            raise "Hit the boundary"
+
     def show_game_over(self):
         self.render_bg()
         font = pygame.font.SysFont('arial', 30)
