@@ -139,7 +139,7 @@ class Game:
     def display_score(self):
         font = pygame.font.SysFont('arial',30)
         x = self.snake.length - 1
-        score = font.render(f"Score: {x}", True, (200,200,200))
+        score = font.render(f"Score: {self.snake.length}", True, (200,200,200))
         self.surface.blit(score,(800,10))
 
     def run(self):
